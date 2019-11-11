@@ -8,7 +8,7 @@ module.exports = {
             subject: 'authorization',
             algorithm: 'RS256',
             expiresIn: '15d',
-            issuer: 'Famenik'
+            issuer: 'issuer'
         }
         let privateKey = fs.readFileSync("./api/secret/private.key", "utf-8");
         try
@@ -27,7 +27,7 @@ module.exports = {
             subject: 'authorization',
             algorithms: ['RS256'],
             maxAge: '15d',
-            issuer: 'Famenik'
+            issuer: 'issuer'
         }
 
         let publicKey = fs.readFileSync("./api/secret/public.key", "utf-8")
